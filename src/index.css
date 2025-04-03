@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    transition: all 0.2s ease-out;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, gray, gray);
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-primary: #000;
+    --bg-secondary: #2D2D2D;
+    --bg-acting: #2D2D2D;
+    --text-primary: white;
+    --text-secondary: #9CA3AF;
+    --text-acting: hsl(60, 9%, 90%);
+    --border-color: #4B5563;
+    --accent-hover: #374151;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    font-family: "Poppins", monospace;
+    font-weight: 400;
+}
+
+.containers {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7), url('https://cdn.pixabay.com/photo/2023/02/14/09/49/ai-generated-7789176_1280.jpg'));
+    background-position: center;
+    background-size: cover;
+}
+
+.custom-shadow-outer {
+    box-shadow: -10px -10px 30px #FFFFFF, 10px 10px 30px hsl(240, 12%, 40%);
+}
+
+.custom-shadow-inner {
+    box-shadow: inset -10px -10px 10px hsl(240, 12%, 25%), inset 10px 10px 10px #FFFFFF;
+}
+
+.bg-effects {
+    background: radial-gradient(circle, purple, orange, black);
+    box-shadow: rgba(128, 128, 128, 0.1), rgb(255, 255, 255, 0.1);
+
+    z-index: -1;
+}
+
+
+.custom-shadow:hover {
+    /* x, y, shadow-radius, spread-radius, shadow-color  */
+    filter: drop-shadow(0 0 24px #ff00bb);
+    
+}
+
+.custom-bg:hover {
+    background-color: rgba(88, 88, 88, 0.5);
+}
+
+input {
+    background: yellowgreen;
+}
