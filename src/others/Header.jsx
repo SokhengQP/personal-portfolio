@@ -26,9 +26,9 @@ export default function Header() {
 
     return (
         <>
-            <div className="flex p-4 justify-between gap-8 rounded-3xl bg-[#80808072] backdrop-blur-xl ">
+            <div className="flex p-4 w-full justify-between gap-8 rounded-3xl bg-[#80808072] backdrop-blur-xl ">
 
-                <Link to={`/`} className='rounded-md '>
+                <Link to={`/`} className='rounded-md'>
                     <img
                         onLoad={() => setIsBeingLoad(true)}
                         src="https://i.pinimg.com/736x/15/96/e8/1596e8b0b72e1119589e2cf679cb8cdd.jpg"
