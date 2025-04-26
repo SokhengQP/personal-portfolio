@@ -4,6 +4,10 @@ import { BiSolidFileCss } from "react-icons/bi";
 import { RiTailwindCssFill, RiJavascriptFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { FaGitSquare } from "react-icons/fa";
+import auth from '../pages/assets/auth.png'
+import movie from '../pages/assets/movie.png'
+import todo from '../pages/assets/todo.png'
+
 
 export default function Resume() {
 
@@ -150,6 +154,27 @@ export default function Resume() {
 
                 </aside>
 
+                {/* Projects */}
+                <div className="bg-[#202022] grid grid-cols-1 p-8 lg:p-16 rounded-3xl ">
+                    <h2 className="text-lg lg:text-5xl font-bold ">Projects</h2>
+                    <div className="flex flex-col lg:flex-row gap-8 mt-4">
+                        <aside className="flex flex-col items-center gap-4 text-center ">
+                            <h2 className="text-sm">Movie website with React & Redux</h2>
+                            <img className="w-96" src={movie} alt="" />
+                        </aside>
+
+                        <aside className="flex flex-col items-center gap-4 text-center">
+                            <h2>Log in & Log out with JWT</h2>
+                            <img className="w-96" src={auth} alt="" />
+                        </aside>
+                        
+                        <aside className="flex flex-col items-center gap-4 text-center">
+                            <h2>To do list</h2>
+                            <img className="w-96" src={todo} alt="" />
+                        </aside>
+                    </div>
+
+                </div>
 
                 <main className="bg-[#202022] grid grid-cols-1 p-8 lg:p-16 rounded-3xl ">
                     <h2 className="text-lg lg:text-5xl font-bold ">My Skills</h2>
@@ -193,7 +218,8 @@ export default function Resume() {
                             })
                         }
                     </div>
-                    
+
+
                     <div>
                         <aside>
                             {
@@ -217,6 +243,7 @@ export default function Resume() {
                         </aside>
                     </div>
                 </main>
+
 
 
 
