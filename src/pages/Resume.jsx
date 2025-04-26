@@ -97,64 +97,70 @@ export default function Resume() {
 
     return (
         <>
-            <div className="flex flex-col gap-12 xl:p-16 bg-[#202022] rounded-3xl">
-                <main className="">
-                    <h1 className="text-5xl font-bold">Education</h1>
-                    <div className="flex flex-col gap-8 ml-8 
-                    
-                    ">
-                        {profiles.results.map((item, index) => {
-                            const { categories, school, timespending, skills, start_date, end_date, continues } =
-                                item;
-                            return (
-                                <div key={index} className="flex flex-col rounded-3xl relative before:absolute before:-left-8 before:rounded-md before:bg-[yellow] before:w-1 before:h-full before:top-2 text-xl before:bg-gradient-to-tr from-[#FFD16A] to-[purple]">
-                                    <p className="text-gray-400">{school}</p>
-                                    <p className="text-gray-400">{skills}</p>
-                                    <p className="text-[#FFD16A] ">{timespending}</p>
-                                    <p className="text-[#FFD16A]">{start_date} {end_date || continues}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </main>
+            <div className="grid grid-cols-1 gap-8">
 
-                <main className="">
-                    <h2 className="text-5xl font-bold">Experience</h2>
-                    <div className="flex flex-col flex-grow relative ml-8
-                    before:absolute
-                    before:border-transparent
-                    before:w-1
-                    before:h-full
-                    before:rounded-md
-                    before:bg-gray-700
-                    before:-left-8
-                    before:bg-gradient-to-tr from-[#FFD16A] to-[purple]
-                       ">
-                        {
-                            profiles.experiences.map((exper, index) => {
-                                const { name_place, type, time, description } = exper;
+                <aside className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                    <main className="bg-[#202022] p-8 rounded-3xl">
+                        <h1 className="text-5xl font-bold ">Education</h1>
+                        <div className="flex flex-col  gap-8 ml-8
+                    
+                        ">
+                            {profiles.results.map((item, index) => {
+                                const { school, timespending, skills, start_date, end_date, continues } =
+                                    item;
                                 return (
-                                    <div key={index}>
-                                        <h2 className="text-2xl">At {name_place} <span className="text-[#FFD16A]">as a {type}</span></h2>
-                                        <section className="text-xl">
-                                            <p className="text-[#FFD16A] ">{time}+</p>
-                                            <p className="text-gray-400 ">{description}</p>
-                                        </section>
+                                    <div key={index} className="flex flex-col rounded-3xl relative before:absolute before:-left-8 before:rounded-md before:bg-[yellow] before:w-1 before:h-full before:top-2 text-xl before:bg-gradient-to-tr from-[#FFD16A] to-[purple]">
+                                        <p className="text-gray-400">{school}</p>
+                                        <p className="text-gray-400">{skills}</p>
+                                        <p className="text-[#FFD16A] ">{timespending}</p>
+                                        <p className="text-[#FFD16A]">{start_date} {end_date || continues}</p>
                                     </div>
                                 )
-                            })
-                        }
-                    </div>
-                </main>
+                            })}
+                        </div>
+                    </main>
 
-                <main className="col-start-1 col-end-3 ">
+                    <main className="bg-[#202022] p-8 lg:p-16 rounded-3xl">
+                        <h2 className="text-5xl font-bold">Experience</h2>
+                        <div className="flex flex-col relative ml-8
+                        before:absolute
+                        before:border-transparent
+                        before:w-1
+                        before:h-full
+                        before:rounded-md
+                        before:bg-gray-700
+                        before:-left-8
+                        before:bg-gradient-to-tr from-[#FFD16A] to-[purple]
+                           ">
+                            {
+                                profiles.experiences.map((exper, index) => {
+                                    const { name_place, type, time, description } = exper;
+                                    return (
+                                        <div key={index}>
+                                            <h2 className="text-2xl">At {name_place} <span className="text-[#FFD16A]">as a {type}</span></h2>
+                                            <section className="text-xl">
+                                                <p className="text-[#FFD16A] ">{time}+</p>
+                                                <p className="text-gray-400 ">{description}</p>
+                                            </section>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
+                    </main>
+
+                </aside>
+
+
+                <main className="bg-[#202022] grid grid-cols-1 p-8 lg:p-16 rounded-3xl ">
                     <h2 className="text-5xl font-bold ">My Skills</h2>
                     <div className="flex items-center flex-wrap">
                         {
                             profiles.skills.map((tys, index) => {
                                 const { html, css, tailwind, js, react, node } = tys;
                                 return (
-                                    <aside className="flex gap-6 justify-between items-center" key={index}>
+                                    <aside className="flex gap-6 justify-start items-center flex-wrap" key={index}>
                                         <section className="flex flex-col gap-4 justify-center w-36 h-36 items-center rounded-lg py-4 px-2 cursor-pointer custom-shadow">
                                             <div className="drop-shadow-[0_0_24px_#5a189a]">{html.icons}</div>
                                             <div className="text-sm text-wrap text-center line-clamp-2 text-gray-400">{html.scripts}</div>
@@ -189,8 +195,9 @@ export default function Resume() {
                             })
                         }
                     </div>
+                    
                     <div>
-                        <aside className="">
+                        <aside>
                             {
                                 profiles.tools.map((item, index) => {
                                     const { git, github } = item

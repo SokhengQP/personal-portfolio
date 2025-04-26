@@ -7,13 +7,10 @@ import { useEffect } from 'react';
 export default function MasterLayout() {
 
     return (
-        <div className='p-8'>
+        <div className='flex flex-col gap-8 p-8'>
             <Header />
-            <div className='flex items-start my-8 rounded-3xl gap-8 '>
-                <aside className=''>
-                    <Personal_Info />
-                </aside>
-
+            <div className='flex gap-8 '>
+                <Personal_Info />
                 <Outlet />
             </div>
         </div>

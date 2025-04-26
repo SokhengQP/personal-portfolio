@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import emailjs from '@emailjs/browser';
-
+import { MdOutlineMessage } from "react-icons/md";
 export default function LocationFinder() {
     const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
@@ -47,19 +47,48 @@ export default function LocationFinder() {
     };
 
     return (
-        <div className="contact-form-container">
-            <h2>Contact Form</h2>
-            <form onSubmit={sendEmail}>
-                <div className="form-row">
-                    <input type="text" placeholder="Full name" value={fullName} onChange={(e) => setFullName(e.target.value)} required />
-                    <input type="email" placeholder="Email address" value={email} onChange={(e) => setEmail(e.target.value)} required />
+        <div className="contact-form-container bg-[#202022]">
+            <form
+                onSubmit={sendEmail}
+                className="flex flex-col gap-8"
+            >
+                <div className="form-row grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+                    
+                    <input
+                        className="flex-grow h-10 p-7 rounded-lg outline-none custom-shadow-outer bg-transparent placeholder:text-sm placeholder:text-white"
+                        type="text"
+                        placeholder="Your name"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                    />
+
+                    <input
+                        className="flex-grow h-10 p-7 rounded-lg outline-none custom-shadow-outer bg-transparent placeholder:text-sm placeholder:text-white"
+                        type="email"
+                        placeholder="Email address"
+                        value={email} onChange={(e) => setEmail(e.target.value)}
+                    />
+
                 </div>
-                <textarea placeholder="Your message" value={message} onChange={(e) => setMessage(e.target.value)} required />
-                <button type="submit" className="send-button" disabled={loading}>
-                    {loading ? 'Sending...' : '✈️ Send Message'}
-                </button>
+
+                <textarea
+                    className="bg-transparent outline-none custom-shadow-outer p-7 rounded-lg placeholder:text-sm placeholder:text-white"
+                    placeholder={`Write your message here...`}
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                />
+
+                <div className='flex justify-center'>
+                    <button
+                        className="border-none hover:bg-blue-500 duration-250 bg-blue-600 w-32 px-6 py-4 rounded-lg"
+                        type="submit"
+                        disabled={loading}>
+                        {loading ? 'Sending...' : 'Submit'}
+                    </button>
+                </div>
+
             </form>
-            {status && <p className="status-message">{status}</p>}
+            
         </div>
     );
 }
