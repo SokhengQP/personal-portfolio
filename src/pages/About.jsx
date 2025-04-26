@@ -12,11 +12,11 @@ export default function About() {
     
     return (
         <>
-            <div className="grid grid-cols-1 gap-8 justify-between p-16 rounded-3xl bg-[#202022] ">
+            <div className="grid grid-cols-1 gap-8 justify-between p-8 lg:p-16 rounded-3xl bg-[#202022] ">
                 <section className="flex flex-col">
                     <h2 className="text-start text-5xl font-semibold">About Me</h2>
 
-                    <div className="text-xl font-[400] leading-7 flex rounded-3xl mt-4 ml-8 text-gray-300 relative
+                    <div className="text-base lg:text-xl font-[400] leading-7 flex rounded-3xl mt-4 ml-8 text-gray-300 relative
                     before:absolute
                     before:border-transparent
                     before:w-1
@@ -35,7 +35,7 @@ export default function About() {
 
                 <div className="flex flex-col">
                     <h2 className="text-start text-3xl font-semibold">What I am doing</h2>
-                    <div data-aos="zoom-in-up" data-aos-duration='500' className="text-sm leading-7 mt-4 flex items-center gap-8">
+                    <div className="text-sm flex-col lg:flex-row leading-7 mt-4 flex items-center gap-8">
                         <section className=" shadow-[2px_2px_3px_rgba(128,128,128,0.4),-2px_-2px_3px_rgba(255,255,255,0.1)] rounded-xl p-6 flex items-center gap-8">
                             <img onLoad={() => setIsLoad(true)} className={`${!isLoad ? 'blur-xl' : ''}`} src={icon_design} alt="" />
                             <div>

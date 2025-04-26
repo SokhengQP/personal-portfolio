@@ -88,8 +88,6 @@ export default function Resume() {
                 icons: <FaGithub size={40} />,
                 scripts: 'A version control system',
             }
-
-
         }]
 
     }
@@ -102,7 +100,7 @@ export default function Resume() {
                 <aside className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
                     <main className="bg-[#202022] p-8 rounded-3xl">
-                        <h1 className="text-5xl font-bold ">Education</h1>
+                        <h1 className="text-lg lg:text-5xl font-bold ">Education</h1>
                         <div className="flex flex-col  gap-8 ml-8
                     
                         ">
@@ -110,7 +108,7 @@ export default function Resume() {
                                 const { school, timespending, skills, start_date, end_date, continues } =
                                     item;
                                 return (
-                                    <div key={index} className="flex flex-col rounded-3xl relative before:absolute before:-left-8 before:rounded-md before:bg-[yellow] before:w-1 before:h-full before:top-2 text-xl before:bg-gradient-to-tr from-[#FFD16A] to-[purple]">
+                                    <div key={index} className="text-sm lg:text-xl flex flex-col rounded-3xl relative before:absolute before:-left-8 before:rounded-md before:bg-[yellow] before:w-1 before:h-full before:top-2 before:bg-gradient-to-tr from-[#FFD16A] to-[purple]">
                                         <p className="text-gray-400">{school}</p>
                                         <p className="text-gray-400">{skills}</p>
                                         <p className="text-[#FFD16A] ">{timespending}</p>
@@ -122,8 +120,8 @@ export default function Resume() {
                     </main>
 
                     <main className="bg-[#202022] p-8 lg:p-16 rounded-3xl">
-                        <h2 className="text-5xl font-bold">Experience</h2>
-                        <div className="flex flex-col relative ml-8
+                        <h2 className="text-lg lg:text-5xl font-bold">Experience</h2>
+                        <div className="flex flex-col relative ml-8 
                         before:absolute
                         before:border-transparent
                         before:w-1
@@ -137,9 +135,9 @@ export default function Resume() {
                                 profiles.experiences.map((exper, index) => {
                                     const { name_place, type, time, description } = exper;
                                     return (
-                                        <div key={index}>
-                                            <h2 className="text-2xl">At {name_place} <span className="text-[#FFD16A]">as a {type}</span></h2>
-                                            <section className="text-xl">
+                                        <div key={index} >
+                                            <h2 className="text-lg lg:text-2xl">At {name_place} <span className="text-[#FFD16A]">as a {type}</span></h2>
+                                            <section className="text-sm lg:text-xl ">
                                                 <p className="text-[#FFD16A] ">{time}+</p>
                                                 <p className="text-gray-400 ">{description}</p>
                                             </section>
@@ -154,7 +152,7 @@ export default function Resume() {
 
 
                 <main className="bg-[#202022] grid grid-cols-1 p-8 lg:p-16 rounded-3xl ">
-                    <h2 className="text-5xl font-bold ">My Skills</h2>
+                    <h2 className="text-lg lg:text-5xl font-bold ">My Skills</h2>
                     <div className="flex items-center flex-wrap">
                         {
                             profiles.skills.map((tys, index) => {

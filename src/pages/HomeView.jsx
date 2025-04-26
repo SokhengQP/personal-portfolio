@@ -12,7 +12,7 @@ export default function HomeView() {
                         alt="my-profile"
                     />
                 </section>
-                <section className="relative text-start text-3xl flex flex-col items-center justify-center rounded-3xl font-[700]">
+                <section className="relative text-start lg:text-3xl flex flex-col items-center justify-center rounded-3xl font-[700]">
                     Welcome! I am Kim Sokheng, a Year III Software Development student and aspiring Web FrontEnd Developer.
                     <Link to={`/project-section`} className="duration-200 mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600">
                         See My Projects
