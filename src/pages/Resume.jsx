@@ -160,17 +160,17 @@ export default function Resume() {
                     <div className="flex flex-col lg:flex-row gap-8 mt-4">
                         <aside className="flex flex-col items-center gap-4 text-center ">
                             <h2 className="text-sm">Movie website with React & Redux</h2>
-                            <img className="w-96" src={movie} alt="" />
+                            <img className="w-96 rounded-lg" src={movie} alt="" />
                         </aside>
 
                         <aside className="flex flex-col items-center gap-4 text-center">
                             <h2>Log in & Log out with JWT</h2>
-                            <img className="w-96" src={auth} alt="" />
+                            <img className="w-96 rounded-lg" src={auth} alt="" />
                         </aside>
                         
                         <aside className="flex flex-col items-center gap-4 text-center">
                             <h2>To do list</h2>
-                            <img className="w-96" src={todo} alt="" />
+                            <img className="w-96 rounded-lg" src={todo} alt="" />
                         </aside>
                     </div>
 
